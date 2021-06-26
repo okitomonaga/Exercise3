@@ -41,6 +41,116 @@ func getdigit(str string) []string {
 	return []string{str_1000, str_100, str_10, str_1}
 }
 
+func getnum1000(str string) int {
+
+	var result int
+	switch str {
+	case "M":
+		result = 1000
+	case "MM":
+		result = 2000
+	case "MMM":
+		result = 3000
+	case "MMMM":
+		result = 4000
+	default:
+		result = 0
+	}
+
+	return result
+
+}
+
+func getnum100(str string) int {
+
+	var result int
+	switch str {
+	case "C":
+		result = 100
+	case "CC":
+		result = 200
+	case "CCC":
+		result = 300
+	case "CD":
+		result = 400
+	case "D":
+		result = 500
+	case "DC":
+		result = 600
+	case "DCC":
+		result = 700
+	case "DCCC":
+		result = 800
+	case "CM":
+		result = 900
+	default:
+		result = 0
+	}
+
+	return result
+
+}
+
+func getnum10(str string) int {
+
+	var result int
+	switch str {
+	case "X":
+		result = 10
+	case "XX":
+		result = 20
+	case "XXX":
+		result = 30
+	case "XL":
+		result = 40
+	case "L":
+		result = 50
+	case "LX":
+		result = 60
+	case "LXX":
+		result = 70
+	case "LXXX":
+		result = 80
+	case "XC":
+		result = 90
+	default:
+		result = 0
+	}
+
+	return result
+
+}
+
+func getnum1(str string) int {
+
+	var result int
+	switch str {
+	case "I":
+		result = 1
+	case "II":
+		result = 2
+	case "III":
+		result = 3
+	case "IV":
+		result = 4
+	case "V":
+		result = 5
+	case "VI":
+		result = 6
+	case "VII":
+		result = 7
+	case "VIII":
+		result = 8
+	case "IX":
+		result = 9
+	default:
+		result = 0
+	}
+
+	return result
+
+}
+
 func main() {
 
 }
