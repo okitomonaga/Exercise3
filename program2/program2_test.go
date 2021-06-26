@@ -2,7 +2,7 @@ package main
 
 import (
 	//"reflect"
-	//"fmt"
+	"fmt"
 	"testing"
 )
 
@@ -99,5 +99,20 @@ func TestGetnum1_2(t *testing.T) {
 	result := getnum1(str)
 	if result != 5 {
 		t.Error("Testgetnum1_2 is failed")
+	}
+}
+
+func TestGenerateNum1_1(t *testing.T) {
+	str := "MCXI"
+	result := generate_num(str)
+	if result != 1111 {
+		t.Error("TestGenerateNum1_1 is failed")
+	}
+}
+func TestGenerateNum1_2(t *testing.T) {
+	str := "MMDLV"
+	result := generate_num(str)
+	if result != 2555 {
+		t.Error("TestGenerateNum1_2 is failed")
 	}
 }

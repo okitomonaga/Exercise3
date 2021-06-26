@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func getdigit(str string) []string {
 	search_id := 0
 	start_id := 0
@@ -151,6 +153,20 @@ func getnum1(str string) int {
 
 }
 
-func main() {
+func generate_num(str string) int {
 
+	digit_slice := make([]string, 4)
+	copy(digit_slice, getdigit(str))
+	result1000 := getnum1000(digit_slice[0])
+	result100 := getnum100(digit_slice[1])
+	result10 := getnum10(digit_slice[2])
+	result1 := getnum1(digit_slice[3])
+	return result1000 + result100 + result10 + result1
+}
+
+func main() {
+	fmt.Println(generate_num("MCMXC"))
+	fmt.Println(generate_num("MMVIII"))
+	fmt.Println(generate_num("XCIX"))
+	fmt.Println(generate_num("XLVII"))
 }
